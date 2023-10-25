@@ -27,24 +27,19 @@ for (const filter of filtersList) {
       for (const photo of galleryAll) {
         photo.style.display = ""
       }
+      lightboxTous.options.children = "a"
+
     } else {
       for (const photo of galleryAll) {
         photo.style.display = "none"
       }
-      const wantedClass =filter.value
+      const wantedClass = filter.value
       const filteredGallery = document.querySelectorAll("."+ wantedClass)
-      for(const filteredPhoto of filteredGallery){
+      console.log(filteredGallery)
+      for (const filteredPhoto of filteredGallery){
         filteredPhoto.style.display = ""
-
-        const lightboxFilter = new PhotoSwipeLightbox({
-          gallery: '#gallery-content',
-          children: filteredGallery,
-          pswpModule: () => import('./../node_modules/photoswipe/dist/photoswipe.esm.min.js'),
-        });
-        lightboxFilter.init
-        lightboxFilter.classList.add("lightboxFilter")
-
       }
+      lightboxTous.options.children = "." + wantedClass
     }
   })
 }
