@@ -6,7 +6,6 @@ const lightboxTous = new PhotoSwipeLightbox({
   pswpModule: () => import('./../node_modules/photoswipe/dist/photoswipe.esm.min.js'),
 });
 lightboxTous.init();
-console.log(lightboxTous)
 
 
 
@@ -35,7 +34,6 @@ for (const filter of filtersList) {
       }
       const wantedClass = filter.value
       const filteredGallery = document.querySelectorAll("."+ wantedClass)
-      console.log(filteredGallery)
       for (const filteredPhoto of filteredGallery){
         filteredPhoto.style.display = ""
       }

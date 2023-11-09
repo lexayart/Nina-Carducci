@@ -150,6 +150,10 @@ body {
 	padding-block: 2em;
 }
 
+.gallery-item{
+	text-decoration: none;
+}
+
 .gallery-item img {
 	object-fit: cover;
 	padding: .5em;
@@ -225,6 +229,10 @@ body {
 
 #contact .container {
 	display: flex;
+}
+
+.contact-point{
+	font-weight: 800;
 }
 
 .picture.right::before {
